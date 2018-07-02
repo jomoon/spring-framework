@@ -88,4 +88,10 @@ public abstract class PatternMatchUtils {
 		return false;
 	}
 
+
+	public static void main(String[] args) {
+		boolean b = simpleMatch(new String[]{"xxx*", "*abc*"}, "abc");
+		System.out.print(b);
+	}
+
 }

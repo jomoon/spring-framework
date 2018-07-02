@@ -438,6 +438,9 @@ public class BeanDefinitionParserDelegate {
 		if (beanDefinition != null) {
 			if (!StringUtils.hasText(beanName)) {
 				try {
+					/**
+					 * 如果不存在名字就根据spring中提供的命名规则去生成对应的名字
+					 */
 					if (containingBean != null) {
 						beanName = BeanDefinitionReaderUtils.generateBeanName(
 								beanDefinition, this.readerContext.getRegistry(), true);
