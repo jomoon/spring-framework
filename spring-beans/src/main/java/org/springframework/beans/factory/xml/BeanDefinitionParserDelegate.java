@@ -792,7 +792,9 @@ public class BeanDefinitionParserDelegate {
 						if (StringUtils.hasLength(nameAttr)) {
 							valueHolder.setName(nameAttr);
 						}
+						//这个是什么意思extractSource
 						valueHolder.setSource(extractSource(ele));
+						//不允许指定相同参数
 						if (bd.getConstructorArgumentValues().hasIndexedArgumentValue(index)) {
 							error("Ambiguous constructor-arg entries for index " + index, ele);
 						}
